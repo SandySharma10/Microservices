@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/auth")
 public class AuthController {
     private Logger logger= LoggerFactory.getLogger(AuthController.class);
+    //Its for login
     @GetMapping("/login")
    public ResponseEntity<AuthResponse>login(@RegisteredOAuth2AuthorizedClient("okta") OAuth2AuthorizedClient client,
                                             @AuthenticationPrincipal OidcUser user,
